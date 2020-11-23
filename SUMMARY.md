@@ -18,4 +18,6 @@
     * Vuex
 * React
     * ReactNative
+* 优化适配
+    * [H5适配PC；rem](./web/rem.md)
 

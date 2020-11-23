@@ -36,10 +36,10 @@ __解决跨域问题主要由3种：__
 {
 	Origin: http://baidu.com
 }
-// response-header 
+// response-header
 {
 	// 或者是使用通配符 *
- 	Access-Control-Allow-Origin: http://baidu.com 
+ 	Access-Control-Allow-Origin: http://baidu.com
 }
 
 非简单请求，
@@ -54,13 +54,13 @@ Content-Language
 Last-Event-ID
 Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain
 不满足以上任一条件，出于安全发起预检请求OPTIONS
-// request-header 
+// request-header
 {
-	Origin: http://baidu.com 
+	Origin: http://baidu.com
 	Access-Control-Request-Method: PUT,
 	Access-Control-Request-Headers: XXXX, DDDD  // 非简单请求的自定义header字段名列表
 }
-// response-header 
+// response-header
 {
 	// 或者是使用通配符 *
  	Access-Control-Allow-Origin: http://baidu.com
@@ -75,7 +75,7 @@ withCredentials
 	Origin: http://baidu.com
 	withCredentials: true
 }
-// response-header 
+// response-header
 {
  	Access-Control-Allow-Origin: http://baidu.com  // 不能使用通配符
  	Access-Control-Allow-Credentials: true  //允许发送Cookie和http认证信息
@@ -153,12 +153,17 @@ __方案三：__
 ```java
 // 该方案需要Android 4.4及以上
 @TargetApi(Build.VERSION_CODES.KITKAT)
-public void Android2JsHaveParmHaveResult2(View view) { 
+public void Android2JsHaveParmHaveResult2(View view) {
  	mWebView.evaluateJavascript("sumToJava(3,4)", new ValueCallback<String>() {
-    @Override 
-    public void onReceiveValue(String Str) {   
+    @Override
+    public void onReceiveValue(String Str) {
     	   // str返回值
     });
 }
 ```
 
+### Http&Https兼容
+
+```html
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+```
