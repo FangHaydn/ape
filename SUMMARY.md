@@ -16,6 +16,7 @@
     * [ES6](./web/ES6.md)
     * [Promise](./web/Promise.md)
     * [防抖和节流](./web/debounce&throttle.md)
+    * [EventLoop](./web/EventLoop.md)
 
 * Html
 * CSS
