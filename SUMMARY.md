@@ -5,9 +5,9 @@
 ## Web
 
 * [Browser](./web/Browser.md)
-    * [从浏览器多进程到JS单线程](./web/JS-SingleThred.pdf)
-    * [外链CSS延迟DOM解析和DOMContentLoaded](./web/CSS&DOM.pdf)
-    * [CSS_JS 阻塞 DOM 解析和渲染](./web/JS&DOM.pdf)
+    * [从浏览器多进程到JS单线程](./web/JS-SingleThread.md)
+    * [外链CSS延迟DOM解析和DOMContentLoaded](./web/CSS&DOM.md)
+    * [CSS_JS 阻塞 DOM 解析和渲染](./web/JS&DOM.md)
 
 * [Http](./web/Http.md)
     * [Http缓存](./web/http-cache.md)
@@ -34,5 +34,5 @@
 
 ## Other
 
-* [生成密码工具](./other/generate.html)
+* [生成密码工具](https://fanghaydn.github.io/zoom/generatepwd.html)
 * [Crontab定时任务](./other/crontab.md)
