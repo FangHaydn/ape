@@ -17,6 +17,7 @@
     * [Promise](./web/Promise.md)
     * [防抖和节流](./web/debounce&throttle.md)
     * [EventLoop](./web/EventLoop.md)
+    * [JavaScript 浮点数陷阱及解法](./web/js-float.md)
 
 * Html
 * CSS
@@ -25,7 +26,9 @@
     * VueRouter
     * Vuex
 
-* React
+* [React](./web/react.md)
+    * [React中函数this绑定](./web/react-bind-arrow.md)
+    * Hooks
     * ReactNative
 
 * 优化适配
