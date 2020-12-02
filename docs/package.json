@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "publish": "gitbook build ./ ./docs"
+    }
+}

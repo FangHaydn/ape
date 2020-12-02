@@ -1,0 +1,763 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CSS_JS 阻塞 DOM 解析和渲染 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="CSS&DOM.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Browser
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="Browser.html">
+            
+                <a href="Browser.html">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="JS-SingleThread.html">
+            
+                <a href="JS-SingleThread.html">
+            
+                    
+                    从浏览器多进程到JS单线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="CSS&DOM.html">
+            
+                <a href="CSS&DOM.html">
+            
+                    
+                    外链CSS延迟DOM解析和DOMContentLoaded
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.4" data-path="JS&DOM.html">
+            
+                <a href="JS&DOM.html">
+            
+                    
+                    CSS_JS 阻塞 DOM 解析和渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    HTTP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="Http.html">
+            
+                <a href="Http.html">
+            
+                    
+                    Http&Https
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="http-cache.html">
+            
+                <a href="http-cache.html">
+            
+                    
+                    Http缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    JS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="JavaScript.html">
+            
+                <a href="JavaScript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="ES6.html">
+            
+                <a href="ES6.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="Promise.html">
+            
+                <a href="Promise.html">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="debounce&throttle.html">
+            
+                <a href="debounce&throttle.html">
+            
+                    
+                    防抖和节流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="EventLoop.html">
+            
+                <a href="EventLoop.html">
+            
+                    
+                    EventLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="js-float.html">
+            
+                <a href="js-float.html">
+            
+                    
+                    JavaScript 浮点数陷阱及解法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Html
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    CSS
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" >
+            
+                <span>
+            
+                    
+                    Webpack
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" >
+            
+                <span>
+            
+                    
+                    Vuejs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" >
+            
+                <span>
+            
+                    
+                    Vue
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" >
+            
+                <span>
+            
+                    
+                    VueRouter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" >
+            
+                <span>
+            
+                    
+                    Vuex
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" >
+            
+                <span>
+            
+                    
+                    Reactjs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="react.html">
+            
+                <a href="react.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="react-bind-arrow.html">
+            
+                <a href="react-bind-arrow.html">
+            
+                    
+                    React中函数this绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" >
+            
+                <span>
+            
+                    
+                    React Hooks
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.4" >
+            
+                <span>
+            
+                    
+                    ReactNative
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" >
+            
+                <span>
+            
+                    
+                    优化适配
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.9.1" data-path="rem.html">
+            
+                <a href="rem.html">
+            
+                    
+                    H5适配PC；rem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9.2" data-path="1px.html">
+            
+                <a href="1px.html">
+            
+                    
+                    1px问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://fanghaydn.github.io/zoom/generatepwd.html">
+            
+                    
+                    生成密码工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../other/crontab.html">
+            
+                <a href="../other/crontab.html">
+            
+                    
+                    Crontab定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >CSS_JS 阻塞 DOM 解析和渲染</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="ccssssjjss-&#x963B;&#x963B;&#x585E;&#x585E;-ddoomm-&#x89E3;&#x89E3;&#x6790;&#x6790;&#x548C;&#x548C;&#x6E32;&#x6E32;&#x67D3;&#x67D3;">CCSSSS//JJSS &#x963B;&#x963B;&#x585E;&#x585E; DDOOMM &#x89E3;&#x89E3;&#x6790;&#x6790;&#x548C;&#x548C;&#x6E32;&#x6E32;&#x67D3;&#x67D3;</h2>
+<pre><code>CSS DOM JavaScript &#x6027;&#x80FD;
+</code></pre><h3 id="&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x2EDA;&#x9762;&#x6837;&#x5F0F;&#x4E00;&#x822C;&#x5199;&#x5728;html&#x5934;&#x90E8;&#xFF0C;&#x800C;&#x2EDA;&#x9762;&#x811A;&#x672C;&#x653E;&#x5728;html&#x5C3E;&#x90E8;&#x3002;-&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x811A;&#x672C;&#x548C;&#x6837;&#x5F0F;&#x4F1A;&#x963B;&#x585E;">&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x2EDA;&#x9762;&#x6837;&#x5F0F;&#x4E00;&#x822C;&#x5199;&#x5728;HTML&#x5934;&#x90E8;&#xFF0C;&#x800C;&#x2EDA;&#x9762;&#x811A;&#x672C;&#x653E;&#x5728;HTML&#x5C3E;&#x90E8;&#x3002; &#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x811A;&#x672C;&#x548C;&#x6837;&#x5F0F;&#x4F1A;&#x963B;&#x585E;</h3>
+<h3 id="dom&#x6E32;&#x67D3;&#x3002;-&#x672C;&#x6587;&#x5177;&#x4F53;&#x5206;&#x6790;&#x4E86;&#x5305;&#x62EC;&#x811A;&#x672C;&#x548C;&#x6837;&#x5F0F;&#x5728;&#x5185;&#x7684;&#x8D44;&#x6E90;&#x5143;&#x7D20;&#x5BF9;dom&#x6E32;&#x67D3;&#x7684;&#x5F71;&#x54CD;&#xFF0C;-&#x5E76;&#x7ED9;&#x51FA;&#x5177;&#x4F53;&#x7684;">DOM&#x6E32;&#x67D3;&#x3002; &#x672C;&#x6587;&#x5177;&#x4F53;&#x5206;&#x6790;&#x4E86;&#x5305;&#x62EC;&#x811A;&#x672C;&#x548C;&#x6837;&#x5F0F;&#x5728;&#x5185;&#x7684;&#x8D44;&#x6E90;&#x5143;&#x7D20;&#x5BF9;DOM&#x6E32;&#x67D3;&#x7684;&#x5F71;&#x54CD;&#xFF0C; &#x5E76;&#x7ED9;&#x51FA;&#x5177;&#x4F53;&#x7684;</h3>
+<h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x3002;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x3002;</h3>
+<pre><code>&#x672C;&#x6587;&#x53EA;&#x8BA8;&#x8BBA;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;&#x7684;DOM&#xFF08;&#x4EE5;&#x4E0B;&#x79F0;&#x4E3A;&#x540C;&#x6B65;&#x6E32;&#x67D3;&#xFF09;&#x8D44;&#x6E90;&#x8F7D;&#x5165;&#x65F6;&#x673A;&#x3002; &#x5173;&#x4E8E;&#x52A8;&#x6001;&#x63D2;&#x5165;HTML&#x6807;&#x7B7E;&#xFF08;&#x5F02;&#x6B65;&#x6E32;
+&#x67D3;&#xFF09;&#x7684;&#x963B;&#x585E;&#x60C5;&#x51B5;&#x8BF7;&#x53C2;&#x8003; &#x5F02;&#x6B65;&#x6E32;&#x67D3;DOM&#x5143;&#x7D20;&#x7684;&#x52A0;&#x8F7D;&#x65F6;&#x673A;&#x4E00;&#x6587;&#x3002;
+</code></pre><h2 id="tldr">TL;DR</h2>
+<pre><code>CSS&#xFF08;&#x5916;&#x94FE;&#x6216;&#x5185;&#x8054;&#xFF09;&#x4F1A;&#x963B;&#x585E; &#x6574;&#x4E2A; DOM&#x7684;&#x6E32;&#x67D3;&#xFF08;Rendering&#xFF09;&#xFF0C;&#x7136;&#x800C;DOM&#x89E3;&#x6790;&#xFF08;Parsing&#xFF09;&#x4F1A;&#x6B63;
+&#x5E38;&#x8FDB;&#x884C;
+&#x5F88;&#x591A;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;CSS&#x4F1A;&#x5EF6;&#x8FDF;&#x811A;&#x672C;&#x6267;&#x884C;&#x548C;DOMContentLoaded&#x4E8B;&#x4EF6;
+JS&#xFF08;&#x5916;&#x94FE;&#x6216;&#x5185;&#x8054;&#xFF09;&#x4F1A;&#x963B;&#x585E; &#x540E;&#x7EED; DOM&#x7684;&#x89E3;&#x6790;&#xFF08;Parsing&#xFF09;&#xFF0C;&#x5EF6;&#x8FDF; DOMContentLoaded&#xFF0C;&#x540E;&#x7EED;DOM
+&#x7684;&#x6E32;&#x67D3;&#xFF08;Rendering&#xFF09;&#x4E5F;&#x5C06;&#x88AB;&#x963B;&#x585E;
+JS&#x524D;&#x7684;DOM&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x89E3;&#x6790;&#xFF08;Parsing&#xFF09;&#x548C;&#x6E32;&#x67D3;&#xFF08;Rendering&#xFF09;
+</code></pre><h2 id="css&#x963B;&#x585E;dom&#x6E32;&#x67D3;">CSS&#x963B;&#x585E;DOM&#x6E32;&#x67D3;</h2>
+<p><strong>&#x65E0;&#x8BBA;&#x662F;&#x5916;&#x94FE;CSS&#x8FD8;&#x662F;&#x5185;&#x8054;CSS&#x90FD;&#x4F1A;&#x963B;&#x585E;DOM&#x6E32;&#x67D3;&#xFF08;Rendering&#xFF09;&#xFF0C;&#x7136;&#x800C;DOM&#x89E3;&#x6790;&#xFF08;Parsing&#xFF09;&#x4F1A;
+&#x6B63;&#x5E38;&#x8FDB;&#x884C;</strong> &#x3002; &#x8FD9;&#x610F;&#x5473;&#x7740;&#x5728;CSS&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x6790;&#x7ED3;&#x675F;&#x4E4B;&#x524D;&#xFF0C;&#x5B83;&#x540E;&#x9762;&#x7684;HTML&#x90FD;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x3002; &#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x6211;
+&#x4EEC;&#x628A;&#x6837;&#x5F0F;&#x653E;&#x5728;HTML&#x5185;&#x5BB9;&#x4E4B;&#x524D;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;&#x88AB;&#x5448;&#x73B0;&#x5185;&#x5BB9;&#x53D1;&#x751F;&#x6837;&#x5F0F;&#x8DF3;&#x52A8;&#x3002; &#x5F53;&#x7136;&#x4EE3;&#x4EF7;&#x5C31;&#x662F;&#x663E;&#x793A;&#x5EF6;&#x8FDF;&#xFF0C;&#x6240;&#x4EE5;</p>
+<h1 id="&#x6027;&#x80FD;&#x6538;&#x5173;&#x7684;&#x7AD9;&#x70B9;&#x90FD;&#x4F1A;&#x5185;&#x8054;&#x6240;&#x6709;css&#x3002;-&#xF51D;">&#x6027;&#x80FD;&#x6538;&#x5173;&#x7684;&#x7AD9;&#x70B9;&#x90FD;&#x4F1A;&#x5185;&#x8054;&#x6240;&#x6709;CSS&#x3002; &#xF51D;</h1>
+<pre><code>arttle Land &#x6807;&#x7B7E;^ &#x5F52;&#x6863;^ &#x5173;&#x4E8E;
+</code></pre><p>&#x7136;&#x800C;&#xFF0C;&#x5F88;&#x591A;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;CSS&#x8FD8;&#x4F1A;&#x5EF6;&#x8FDF;&#x811A;&#x672C;&#x6267;&#x884C;&#x548C;DOMContentLoaded&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#xFF08;&#x8BE5;&#x4E8B;&#x4EF6;&#x5C31;&#x662F;jQuery&#x7684;
+dom ready&#xFF09;&#x3002; &#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86;&#x4E0D;&#x540C;&#x6D4F;&#x89C8;&#x5668;&#x662F;&#x5426;&#x4F1A;&#x5EF6;&#x8FDF;&#x811A;&#x672C;&#x6267;&#x884C;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x89E3;&#x91CA;&#x53EF;&#x53C2;&#x8003; CSS&#x8F7D;&#x5165;&#x4E0E;DOM
+ContentLoaded&#x4E8B;&#x4EF6;&#x5EF6;&#x8FDF; &#x4E00;&#x6587;&#x3002;</p>
+<pre><code>&#x6E32;&#x67D3;&#x5F15;&#x64CE; &#x6837;&#x5F0F;&#x8868;&#x4E4B;&#x524D;&#x7684;&#x811A;
+&#x672C;
+</code></pre><pre><code>&#x6837;&#x5F0F;&#x8868;&#x4E4B;&#x540E;&#x7684;&#x5916;&#x90E8;&#x811A;
+&#x672C;
+</code></pre><pre><code>&#x6837;&#x5F0F;&#x8868;&#x4E4B;&#x540E;&#x7684;&#x884C;&#x5185;&#x811A;
+&#x672C;
+Presto (Opera) &#x5426; &#x5426; &#x5426;
+Webkit (Safari, Chrom
+e) &#x5426; &#x662F; &#x662F;
+Gecko (Firefox) &#x5426; &#x662F; &#x662F;
+Trident (MSIE) &#x662F; &#x662F;
+</code></pre><p>&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x6DFB;&#x52A0;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#x6765;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x963B;&#x585E;&#x3002; &#x5C24;&#x5176;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7AD9;&#x70B9;&#x53EF;&#x4EE5;&#x505A;&#x6B64;&#x4F18;&#x5316;&#xFF1A;</p>
+<pre><code>&lt;link href=&quot;other.css&quot; rel=&quot;stylesheet&quot; media=&quot;(min-width: 40em)&quot;&gt;
+</code></pre><h2 id="css&#x963B;&#x585E;dom&#x6E32;&#x67D3;&#xFF1A;&#x6848;&#x4F8B;">CSS&#x963B;&#x585E;DOM&#x6E32;&#x67D3;&#xFF1A;&#x6848;&#x4F8B;</h2>
+<h3 id="&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1;css&#x963B;&#x585E;&#x6E32;&#x67D3;&#x4F46;&#x4E0D;&#x963B;&#x585E;&#x89E3;&#x6790;&#x4EE5;&#x53CA;&#x811A;&#x672C;&#x5EF6;&#x8FDF;&#x884C;&#x4E3A;&#xFF0C;&#x8BBE;&#x8BA1;&#x4E0B;&#x5217;html&#x3002;-&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;&#x5730;&#x6253;&#x5370;&#x5F53;">&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1;CSS&#x963B;&#x585E;&#x6E32;&#x67D3;&#x4F46;&#x4E0D;&#x963B;&#x585E;&#x89E3;&#x6790;&#x4EE5;&#x53CA;&#x811A;&#x672C;&#x5EF6;&#x8FDF;&#x884C;&#x4E3A;&#xFF0C;&#x8BBE;&#x8BA1;&#x4E0B;&#x5217;HTML&#x3002; &#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;&#x5730;&#x6253;&#x5370;&#x5F53;</h3>
+<h3 id="&#x524D;dom&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x53CA;&#x5728;&#x6837;&#x5F0F;&#x8868;&#x540E;&#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;&#x811A;&#x672C;&#x3002;">&#x524D;DOM&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x53CA;&#x5728;&#x6837;&#x5F0F;&#x8868;&#x540E;&#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;&#x811A;&#x672C;&#x3002;</h3>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;h2&gt;Hello&lt;/h2&gt;
+&lt;script&gt;
+function printH2(){
+console.log(&apos;first script&apos;, document.querySelectorAll(&apos;h2&apos;));
+}
+printH2();
+setTimeout(printH2);
+&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.0.0-a
+&lt;h2&gt;World&lt;/h2&gt;
+&lt;script&gt; console.log(&apos;second script&apos;); &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>&#x9700;&#x8981;&#x6253;&#x5F00;Chrome&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x7684;Disable Cache&#x548C;Throttling&#x6765;&#x6A21;&#x62DF;&#x8F83;&#x6162;&#x7684;&#x7F51;&#x7EDC;&#x3002; &#x7136;&#x540E;&#x5728;&#x6837;&#x5F0F;&#x8868;
+&#x8F7D;&#x5165;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x5230;&#x4EE5;&#x4E0B;&#x73B0;&#x8C61;&#xFF1A;</p>
+<pre><code>1. &#x4E24;&#x4E2A;&lt;h2&gt;&#x6807;&#x7B7E;&#x5747;&#x4E3A;&#x663E;&#x793A;&#xFF0C;&#x8BF4;&#x660E;&#x6837;&#x5F0F;&#x8868;&#x4F1A;&#x963B;&#x585E;&#x548C;&#x5EF6;&#x8FDF;&#x6574;&#x4E2A;DOM&#x7684;&#x6E32;&#x67D3;&#x3002;
+2. &#x7B2C;&#x4E00;&#x6B21;&#x8F93;&#x51FA;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&lt;h2&gt;&#xFF0C;&#x8BF4;&#x660E;&#x811A;&#x672C;&#x6267;&#x884C;&#x4F1A;&#x963B;&#x585E; DOM &#x89E3;&#x6790;&#xFF08;&#x611F;&#x8C22;@huahua&#x6307;&#x6B63;&#xFF09;&#x3002;
+3. &#x7B2C;&#x4E8C;&#x6B21;&#x8F93;&#x51FA;&#x6709;&#x4E24;&#x4E2A;&lt;h2&gt;&#xFF0C;&#x8BF4;&#x660E;&#x6837;&#x5F0F;&#x8F7D;&#x5165;&#x8FC7;&#x7A0B;&#x4E2D;DOM&#x5DF2;&#x89E3;&#x6790;&#x5B8C;&#x6BD5;&#xFF0C;&#x5373;&#x6837;&#x5F0F;&#x8868;&#x4E0D;&#x4F1A;&#x963B;&#x585E;DOM&#x89E3;
+&#x6790;&#x3002;
+4. &quot;second script&quot;&#x672A;&#x88AB;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x8BF4;&#x660E;&#x5728;Chrome&#x4E2D;&#x6837;&#x5F0F;&#x8868;&#x4E4B;&#x540E;&#x7684;&#x884C;&#x5185;&#x811A;&#x672C;&#x88AB;&#x5EF6;&#x8FDF;&#x4E86;&#x3002;
+</code></pre><h2 id="js-&#x963B;&#x585E;-dom-&#x89E3;&#x6790;">JS &#x963B;&#x585E; DOM &#x89E3;&#x6790;</h2>
+<pre><code>&#x4E0A;&#x6587;&#x90FD;&#x5728;&#x8BB2;&#x6E32;&#x67D3;&#xFF0C;&#x8FD9;&#x91CC;&#x8BB2;&#x89E3;&#x6790;&#x3002;&#x89E3;&#x6790;&#x662F;&#x6307;&#x6D4F;&#x89C8;&#x5668;&#x751F;&#x6210; DOM &#x6811;&#x7ED3;&#x6784;&#xFF08;&#x6B64;&#x65F6;&#x7528;&#x6237;&#x4E0D;&#x4E00;&#x5B9A;&#x80FD;&#x770B;&#x5230;&#xFF0C;&#x4F46;&#x811A;&#x672C;&#x6BD4;&#x5982; qu
+erySelectorAll &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#xFF09;&#xFF1B;&#x6E32;&#x67D3;&#x662F;&#x6307;&#x6D4F;&#x89C8;&#x5668;&#x628A; DOM &#x6811;&#x4E0E; CSS &#x7ED3;&#x5408;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x5E76;&#x7ED8;&#x5236;&#x5230;&#x5C4F;&#x5E55;&#xFF08;&#x6B64;&#x65F6;&#x7528;
+&#x6237;&#x662F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7684;&#xFF09;&#x3002;
+</code></pre><p><strong>&#x4E0D;&#x8BBA;&#x662F;&#x5185;&#x8054;&#x8FD8;&#x662F;&#x5916;&#x94FE;JavaScript&#x90FD;&#x4F1A;&#x963B;&#x585E;&#x540E;&#x7EED;DOM&#x89E3;&#x6790;&#xFF08;Parsing&#xFF09;&#xFF0C;DOMContentLoaded &#x4E8B;&#x4EF6;&#x4F1A;
+&#x88AB;&#x5EF6;&#x8FDF;&#xFF0C;&#x540E;&#x7EED;&#x7684; DOM &#x6E32;&#x67D3;&#xFF08;Rendering&#xFF09;&#x4E5F;&#x4F1A;&#x88AB;&#x963B;&#x585E;&#x3002;</strong> &#x8FD9;&#x610F;&#x5473;&#x7740;&#x811A;&#x672C;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;&#x4F1A;
+&#x5148;&#x4E8E;&#x540E;&#x7EED;&#x7684; HTML &#x5C55;&#x73B0;&#xFF0C;&#x5373;&#x4F7F;&#x811A;&#x672C;&#x662F;&#x5916;&#x94FE;&#x8D44;&#x6E90;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002; &#x7531;&#x4E8E; JavaScript &#x53EA;&#x4F1A;&#x963B;&#x585E;&#x540E;&#x7EED;&#x7684; DO
+M&#xFF0C;&#x524D;&#x9762;&#x7684; DOM &#x5728;&#x89E3;&#x6790;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x88AB;&#x7ACB;&#x5373;&#x6E32;&#x67D3;&#x7ED9;&#x7528;&#x6237;&#x3002; &#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x628A;&#x811A;&#x672C;&#x653E;&#x5728;&#x2EDA;&#x9762;&#x5E95;&#x90E8;&#xFF1A;
+&#x811A;&#x672C;&#x4ECD;&#x5728;&#x4E0B;&#x8F7D;&#x65F6;&#x2EDA;&#x9762;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x5730;&#x663E;&#x793A;&#x4E86;&#x3002;</p>
+<p>&#x4F46;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8F7D;&#x5165;&#x6807;&#x8BC6;&#x4ECD;&#x7136;&#x4F1A;&#x63D0;&#x793A;&#x2EDA;&#x9762;&#x6B63;&#x5728;&#x8F7D;&#x5165;&#xFF0C;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;Hack&#xFF0C; &#x2EC5;&#x5F02;&#x6B65;&#x811A;&#x672C;&#x8F7D;&#x5165;&#x63D0;&#x9AD8;&#x2EDA;
+&#x9762;&#x6027;&#x80FD;&#x4E00;&#x6587;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x9664;&#x4E86;&#x811A;&#x672C;&#x4E4B;&#x5916;&#xFF0C;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x52A0;&#x8F7D;&#x4E5F;&#x4F1A;&#x5EF6;&#x8FDF; DOMContentLoaded&#xFF0C; &#x867D;&#x7136;&#x4E0D;&#x53EF;&#x601D;
+&#x8BAE;&#x4F46;&#x8FD9;&#x662F;&#x6B63;&#x5728;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x5B9E;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#xFF1A;&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x8868;&#x4E0E;DOMContentLoaded&#x4E8B;&#x4EF6;&#x5EF6;&#x8FDF;&#x4E00;&#x6587;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CSS&DOM.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 外链CSS延迟DOM解析和DOMContentLoaded">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CSS_JS 阻塞 DOM 解析和渲染","level":"2.1.4","depth":2,"next":{"title":"HTTP","level":"2.2","depth":1,"ref":"","articles":[{"title":"Http&Https","level":"2.2.1","depth":2,"path":"web/Http.md","ref":"./web/Http.md","articles":[]},{"title":"Http缓存","level":"2.2.2","depth":2,"path":"web/http-cache.md","ref":"./web/http-cache.md","articles":[]}]},"previous":{"title":"外链CSS延迟DOM解析和DOMContentLoaded","level":"2.1.3","depth":2,"path":"web/CSS&DOM.md","ref":"./web/CSS&DOM.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"web/JS&DOM.md","mtime":"2020-11-26T07:53:22.933Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-02T08:43:28.207Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
