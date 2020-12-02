@@ -1,6 +1,6 @@
 # React中函数this绑定问题
 
-React的class组件中绑定this有多种方式：
+## 绑定this方法：
 
 ### bind
 
@@ -28,9 +28,6 @@ class App extends React.PureComponent {
 
 某些情况存在多占用内存情况，每个类实例都会持有一个该函数
 
-[constructor中bind与class公有类字段定义箭头函数对比]('https://medium.com/dailyjs/demystifying-memory-usage-using-es6-react-classes-d9d904bc4557')
-
-> 引用翻译：使用bind方法时，在大量重复使用组件时可以有一点点的内存优化，如果是个别使用这样做并不值得
 
 ```javascript
 class App extends React.PureComponent {
@@ -75,3 +72,15 @@ class App extends React.PureComponent {
     }
 }
 ```
+
+## 总结
+
+这篇文章有比较深入的说明内存问题：
+
+[constructor中bind与class公有类字段定义箭头函数对比]('https://medium.com/dailyjs/demystifying-memory-usage-using-es6-react-classes-d9d904bc4557')
+
+> 引用翻译：使用bind方法时，在大量重复使用组件时可以有一点点的内存优化，如果是个别使用这样做并不值得
+
+
+## 参考
+https://wenjun.me/2019/07/public-class-fields.html

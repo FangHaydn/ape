@@ -156,5 +156,5 @@ function add(num1, num2) {
 完美支持浮点数的加减乘除、四舍五入等运算。非常小只有 1 K，远小于绝大多数同类库（如Math.js、BigDecimal.js）， 100 % 测试全覆盖，代码可读性强，不妨在你的应用里用起来！
 
 
-
+> [原文地址](https://wenjun.me/2020/11/js-float-number.html)
 
