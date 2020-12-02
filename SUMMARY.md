@@ -4,15 +4,18 @@
 
 ## Web
 
-* [Browser](./web/Browser.md)
+* Browser
+    * [浏览器](./web/Browser.md)
     * [从浏览器多进程到JS单线程](./web/JS-SingleThread.md)
     * [外链CSS延迟DOM解析和DOMContentLoaded](./web/CSS&DOM.md)
     * [CSS_JS 阻塞 DOM 解析和渲染](./web/JS&DOM.md)
 
-* [Http](./web/Http.md)
+* HTTP
+    * [Http&Https](./web/Http.md)
     * [Http缓存](./web/http-cache.md)
 
-* [JavaScript](./web/JavaScript.md)
+* JS
+    * [JavaScript](./web/JavaScript.md)
     * [ES6](./web/ES6.md)
     * [Promise](./web/Promise.md)
     * [防抖和节流](./web/debounce&throttle.md)
@@ -22,13 +25,15 @@
 * Html
 * CSS
 * Webpack
-* Vue
+* Vuejs
+    * Vue
     * VueRouter
     * Vuex
 
-* [React](./web/react.md)
+* Reactjs
+    * [React](./web/react.md)
     * [React中函数this绑定](./web/react-bind-arrow.md)
-    * Hooks
+    * React Hooks
     * ReactNative
 
 * 优化适配
