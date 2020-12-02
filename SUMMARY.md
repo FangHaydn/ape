@@ -42,5 +42,5 @@
 
 ## Other
 
-* [生成密码工具](https://fanghaydn.github.io/zoom/generatepwd.html)
+* [生成密码工具](http://fanghaydn.github.io/ape/other/generatepwd.html)
 * [Crontab定时任务](./other/crontab.md)

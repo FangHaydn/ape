@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title>密码生成</title>
+        <script>
+            var pwdCharString =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!#$.&*()";
+            String.prototype.hashCode = function () {
+                var hash = 0,
+                    i,
+                    chr;
+                if (this.length === 0) return hash;
+                for (i = 0; i < this.length; i++) {
+                    chr = this.charCodeAt(i);
+                    hash = (hash << 5) - hash + chr;
+                    hash |= 0;
+                }
+                return hash;
+            };
+            function generate(params) {
+                var length = Math.floor(parseInt(params[2]));
+                if (!(length > 5 && length < 33)) {
+                    length = 12;
+                }
+                var key1 = params[0];
+                if (!key1) {
+                    key1 = "1";
+                }
+                var key2 = params[1];
+                if (!key2) {
+                    key2 = "2";
+                }
+                var hash = Math.abs(key1.hashCode() + key2.hashCode());
+                var charCount = pwdCharString.length;
+                var password = [];
+                for (let i = length; i > 0; i--) {
+                    hash = (hash << i) - hash + i;
+                    let index = Math.abs(hash) % charCount;
+                    password.push(pwdCharString.charAt(index));
+                }
+                document.getElementById("pwd").innerHTML = password.join("");
+            }
+            function getParams() {
+                var values = [],
+                    elements;
+                elements = document.getElementsByClassName("input");
+                for (var i = 0; i < elements.length; i++) {
+                    values.push(elements[i].value);
+                }
+                generate(values);
+            }
+            function copy() {
+                var range = document.createRange();
+                range.selectNode(document.querySelector("#pwd"));
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                var successful = document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+            }
+        </script>
+        <style>
+			:root {
+				font-size: 13.333333vw;
+			}
+			/* 适配大屏，设置默认的字体大小 */
+			@media screen and (min-width: 500px) {
+				:root {
+					font-size: 67px;
+				}
+			}
+            .wrap {
+                color: gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 0.2rem;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 500px;
+            }
+            h2 {
+                font-size: 0.3rem;
+				margin-top: 0.4rem;
+            }
+            input {
+                font-size: 0.32rem;
+                border-color: transparent;
+                border-bottom-color: gray;
+                border-width: 0;
+                border-bottom-width: 1px;
+				background-color: transparent;
+            }
+            button {
+                margin-top: 0.4rem;
+                font-size: 0.32rem;
+                padding: 0.2rem;
+                border: 1px solid #ccc;
+            }
+            .pwd {
+                font-size: 0.4rem;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <h2>固定密钥:</h2>
+            <input type="text" class="input" />
+            <h2>不同平台密钥:</h2>
+            <input type="text" class="input" />
+            <h2>密码长度（6-32, 默认12位）:</h2>
+            <input type="number" class="input" />
+            <button onclick="getParams()">生成密码</button>
+            <h2>密码:</h2>
+			<p class="pwd" id="pwd"></p>
+			<button onclick="copy()">复制密码</button>
+        </div>
+    </body>
+</html>
