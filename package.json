@@ -2,8 +2,5 @@
     "scripts": {
         "publish": "gitbook build ./ ./docs",
         "start": "gitbook serve ./ ./_book"
-    },
-    "gitHooks": {
-        "pre-push": "npm run publish"
     }
 }

@@ -1,5 +1,6 @@
 {
     "scripts": {
-        "publish": "gitbook build ./ ./docs"
+        "publish": "gitbook build ./ ./docs",
+        "start": "gitbook serve ./ ./_book"
     }
 }
