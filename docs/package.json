@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "publish": "gitbook build ./ ./docs",
+        "publish": "gitbook build ./ ./docs && echo 'blog.haydn.zone' > ./docs/CNAME",
         "start": "gitbook serve ./ ./_book"
     }
 }
