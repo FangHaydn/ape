@@ -327,11 +327,30 @@
                 <span>
             
                     
-                    Html
+                    HTML
             
                 </span>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="html.html">
+            
+                <a href="html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -407,40 +426,53 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.7.1" >
+        <li class="chapter " data-level="2.7.1" data-path="vue.html">
             
-                <span>
+                <a href="vue.html">
             
                     
                     Vue
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.7.2" >
+        <li class="chapter " data-level="2.7.2" data-path="nexttickets.html">
             
-                <span>
+                <a href="nexttickets.html">
+            
+                    
+                    nexttickets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="vuerouter.html">
+            
+                <a href="vuerouter.html">
             
                     
                     VueRouter
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.7.3" >
+        <li class="chapter " data-level="2.7.4" data-path="vuex.html">
             
-                <span>
+                <a href="vuex.html">
             
                     
                     Vuex
             
-                </span>
+                </a>
             
 
             
@@ -576,7 +608,7 @@
     
         <li class="chapter " data-level="3.1" >
             
-                <a target="_blank" href="http://fanghaydn.github.io/ape/other/generatepwd.html">
+                <a target="_blank" href="https://fanghaydn.github.io/ape/other/generatepwd.html">
             
                     
                     生成密码工具
@@ -646,11 +678,18 @@
                                 <section class="normal markdown-section">
                                 
                                 <p>javascript&#x4EE3;&#x7801;&#x662F;&#x5355;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#xFF0C;&#x5B8F;&#x89C2;&#x4E0A;&#x5206;&#x540C;&#x6B65;&#x4EFB;&#x52A1;&#x548C;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x3002;</p>
-<p>&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x53EF;&#x7EC6;&#x5206;&#x4E3A;&#x5B8F;&#x4EFB;&#x52A1;&#xFF08;task queue&#xFF09;&#x548C;&#x5FAE;&#x4EFB;&#x52A1;&#xFF08;macrotask queue&#xFF09;</p>
-<p>&#x6240;&#x6709;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x901A;&#x8FC7;eventloop&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x5B9E;&#x73B0;&#x8C03;&#x5EA6;</p>
-<p><img src="images/eventloop-2.jpg" alt="img"></p>
-<p><img src="images/eventloop-1.jpg" alt="img"></p>
+<p>&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x53EF;&#x7EC6;&#x5206;&#x4E3A;&#x5B8F;&#x4EFB;&#x52A1;&#xFF08;macrotask queue&#xFF09;&#x548C;&#x5FAE;&#x4EFB;&#x52A1;&#xFF08;microtask queue&#xFF09;</p>
+<p>&#x6240;&#x6709;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x901A;&#x8FC7;eventloop&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x5B9E;&#x73B0;&#x8C03;&#x5EA6;:</p>
+<p>step1&#xFF1A;&#x4E3B;&#x7EBF;&#x7A0B;&#x8BFB;&#x53D6;JS&#x4EE3;&#x7801;&#xFF0C;&#x6B64;&#x65F6;&#x4E3A;&#x540C;&#x6B65;&#x73AF;&#x5883;&#xFF0C;&#x5F62;&#x6210;&#x76F8;&#x5E94;&#x7684;&#x5806;&#x548C;&#x6267;&#x884C;&#x6808;;</p>
+<p>step2: &#x4E3B;&#x7EBF;&#x7A0B;&#x9047;&#x5230;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#xFF0C;&#x6307;&#x7ED9;&#x5BF9;&#x5E94;&#x7684;&#x5F02;&#x6B65;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF08;WEB API&#xFF09;;</p>
+<p>step3: &#x5F02;&#x6B65;&#x8FDB;&#x7A0B;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#xFF08;Ajax&#x8FD4;&#x56DE;&#x3001;DOM&#x4E8B;&#x4EF6;&#x5904;&#x7F5A;&#x3001;Timer&#x5230;&#x7B49;&#xFF09;&#xFF0C;&#x5C06;&#x76F8;&#x5E94;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x63A8;&#x5165;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#xFF1B;</p>
+<p>step4&#xFF1A;&#x4E3B;&#x7EBF;&#x7A0B;&#x67E5;&#x8BE2;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#xFF0C;&#x6267;&#x884C;microtask queue&#xFF0C;&#x5C06;&#x5176;&#x6309;&#x5E8F;&#x6267;&#x884C;&#xFF0C;&#x5168;&#x90E8;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF1B;</p>
+<p>step5&#xFF1A;&#x4E3B;&#x7EBF;&#x7A0B;&#x67E5;&#x8BE2;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#xFF0C;&#x6267;&#x884C;macrotask queue&#xFF0C;&#x53D6;&#x961F;&#x9996;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF1B;</p>
+<p>step6&#xFF1A;&#x91CD;&#x590D;step4&#x3001;step5&#x3002;</p>
+<p><img src="images/eventloop-2.jpg" alt="pic-1"></p>
+<p><img src="images/eventloop-1.jpg" alt="pic-2"></p>
 <p><a href="https://zhuanlan.zhihu.com/p/34229323" target="_blank">&#x77E5;&#x4E4E;&#x89E3;&#x7B54;</a></p>
+<p>Vue&#x7684;nextTickets()&#x5C31;&#x662F;&#x4F7F;&#x7528;Promise&#x4E2D;then&#x5B9E;&#x73B0;&#x5FAE;&#x4EFB;&#x52A1;</p>
 
                                 
                                 </section>
@@ -694,7 +733,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"EventLoop","level":"2.3.5","depth":2,"next":{"title":"JavaScript 浮点数陷阱及解法","level":"2.3.6","depth":2,"path":"web/js-float.md","ref":"./web/js-float.md","articles":[]},"previous":{"title":"防抖和节流","level":"2.3.4","depth":2,"path":"web/debounce&throttle.md","ref":"./web/debounce&throttle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"web/EventLoop.md","mtime":"2020-12-28T05:37:49.671Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-29T03:04:30.160Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"EventLoop","level":"2.3.5","depth":2,"next":{"title":"JavaScript 浮点数陷阱及解法","level":"2.3.6","depth":2,"path":"web/js-float.md","ref":"./web/js-float.md","articles":[]},"previous":{"title":"防抖和节流","level":"2.3.4","depth":2,"path":"web/debounce&throttle.md","ref":"./web/debounce&throttle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"web/EventLoop.md","mtime":"2020-12-29T09:02:41.086Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-05T08:25:32.854Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
