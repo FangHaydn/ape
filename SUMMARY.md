@@ -22,15 +22,17 @@
     * [EventLoop](./web/EventLoop.md)
     * [JavaScript 浮点数陷阱及解法](./web/js-float.md)
 
-* Html
+* HTML
+    * [HTML](./web/html.md)
 * CSS
 * Webpack
     * [Webpack](./web/webpack.md)
     * [Babel](./web/babel.md)
 * Vuejs
-    * Vue
-    * VueRouter
-    * Vuex
+    * [Vue](./web/vue.md)
+    * [nexttickets](./web/nexttickets.md)
+    * [VueRouter](./web/vuerouter.md)
+    * [Vuex](./web/vuex.md)
 
 * Reactjs
     * [React](./web/react.md)
@@ -44,5 +46,5 @@
 
 ## Other
 
-* [生成密码工具](http://fanghaydn.github.io/ape/other/generatepwd.html)
+* [生成密码工具](https://fanghaydn.github.io/ape/other/generatepwd.html)
 * [Crontab定时任务](./other/crontab.md)
