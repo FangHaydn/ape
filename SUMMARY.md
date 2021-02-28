@@ -40,9 +40,12 @@
     * React Hooks
     * ReactNative
 
+* [ECharts](./web/echarts.md)
+
 * 优化适配
     * [H5适配PC；rem](./web/rem.md)
     * [1px问题](./web/1px.md)
+
 
 ## Other
 

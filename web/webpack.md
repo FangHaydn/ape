@@ -1,10 +1,10 @@
 # Webpack
 
-[toc]
-
 [中文文档](https://webpack.docschina.org/concepts/)
 
 > 本质上，webpack 是一个用于现代 JavaScript 应用程序的静态模块打包工具。当webpack处理应用程序时，它会在内部构建一个 依赖图(dependency graph)，此依赖图对应映射到项目所需的每个模块，并生成一个或多个 bundle.
+
+![webpack](./images/webpack-1.png)
 
 
 ## 核心概念
@@ -32,10 +32,19 @@ webpack 只能理解 JavaScript 和 JSON 文件，这是 webpack 开箱可用的
 
 通过选择 development, production 或 none 之中的一个，来设置 mode 参数，你可以启用 webpack 内置在相应环境下的优化。其默认值为 production。
 
-## 参考
+## Hotload
+
+[HMR原理](https://github.com/careteenL/webpack-hmr)
+
+![](./images/webpack-2.jpg)
+
+## 相关博文
 
 [带你深度解锁Webpack系列(基础篇)](https://juejin.cn/post/6844904079219490830)
 
 [带你深度解锁Webpack系列(优化篇)](https://juejin.cn/post/6844904093463347208)
 
 [带你深度解锁Webpack系列(进阶篇)](https://juejin.cn/post/6844904084927938567)
+
+
+

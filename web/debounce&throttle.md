@@ -23,8 +23,8 @@ function debounce(timeout, callback) {
 ```javascript
 function throttle(delay, callback) {
     let timestrap = 0
+    let that = this
     return function() {
-        let that = this
         if ((Date.now() - timestrap) > delay) {
             timestrap = Date.now()
             callback.apply(that, arguments)
