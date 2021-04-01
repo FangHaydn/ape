@@ -3,7 +3,7 @@
     <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
-        <title>密码生成</title>
+        <title>HELLO</title>
         <script>
             var pwdCharString =
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!#$.&*()";
@@ -19,7 +19,8 @@
                 }
                 return hash;
             };
-            function generate(params) {
+            function generate() {
+                var params = getParams()
                 var length = Math.floor(parseInt(params[2]));
                 if (!(length > 5 && length < 33)) {
                     length = 12;
@@ -40,7 +41,9 @@
                     let index = Math.abs(hash) % charCount;
                     password.push(pwdCharString.charAt(index));
                 }
-                document.getElementById("pwd").innerHTML = password.join("");
+                var pwd = password.join("")
+                copyToClip(pwd)
+                // document.getElementById("pwd").innerHTML = pwd;
             }
             function getParams() {
                 var values = [],
@@ -49,16 +52,29 @@
                 for (var i = 0; i < elements.length; i++) {
                     values.push(elements[i].value);
                 }
-                generate(values);
+                return values
             }
-            function copy() {
-                var range = document.createRange();
-                range.selectNode(document.querySelector("#pwd"));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range);
-                var successful = document.execCommand("copy");
-                window.getSelection().removeAllRanges();
+            function copyToClip(content) {
+                var aux = document.createElement("input");
+                aux.setAttribute("value", content);
+                document.body.appendChild(aux);
+                aux.select();
+                document.execCommand("copy");
+                document.body.removeChild(aux);
+                if (message == null) {
+                    alert("生成并复制成功");
+                } else{
+                    alert('操作失败');
+                }
             }
+            // function copy() {
+            //     var range = document.createRange();
+            //     range.selectNode(document.querySelector("#pwd"));
+            //     window.getSelection().removeAllRanges();
+            //     window.getSelection().addRange(range);
+            //     var successful = document.execCommand("copy");
+            //     window.getSelection().removeAllRanges();
+            // }
         </script>
         <style>
 			:root {
@@ -107,16 +123,16 @@
 
     <body>
         <div class="wrap">
-            <h2>固定密钥:</h2>
+            <h2>固定:</h2>
             <input type="text" class="input" />
-            <h2>不同平台密钥:</h2>
+            <h2>不固定:</h2>
             <input type="text" class="input" />
-            <h2>密码长度（6-32, 默认12位）:</h2>
+            <h2>长度（6-32, 默认12位）:</h2>
             <input type="number" class="input" />
-            <button onclick="getParams()">生成密码</button>
-            <h2>密码:</h2>
+            <button onclick="generate()">生成并复制</button>
+            <!-- <h2>密码:</h2>
 			<p class="pwd" id="pwd"></p>
-			<button onclick="copy()">复制密码</button>
+			<button onclick="copy()">复制密码</button> -->
         </div>
     </body>
 </html>
